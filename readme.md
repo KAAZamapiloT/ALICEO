@@ -129,17 +129,27 @@ P. Yuan, L. Lin, J. Lin, Y. Liao, T. Zhao
 ## 🗂️ Project Structure
 
 ```text
-low_light_color_mono_fusion/
-├── data/                 # Input RGB & mono images
-├── src/
-│   ├── align.py          # Image alignment logic
-│   ├── colorspace.py     # RGB ↔ YCbCr conversion
-│   ├── fusion.py         # Luminance fusion algorithm
-│   ├── enhance.py        # Contrast enhancement
-│   └── main.py           # End-to-end pipeline
-├── evaluation/
-│   └── metrics.py        # PSNR & SSIM computation
-├── results/              # Output images & comparisons
-├── report/               # Project report (PDF / LaTeX)
-└── README.md
+ALICEO/
+│
+│
+├── experiments/                  # Pretrained model & configs
+│   └── pre_trained_model/
+│       ├── ALICC.py
+│       └── model_best.pth
+│
+├── src/                          # Core processing modules
+│   ├── align.py
+│   ├── colorspace.py
+│   ├── fusion.py
+│   ├── enhance.py
+│   └── ...
+│
+├── evaluation/                   # Metric computation
+│   └── metrics.py
+│
+├── prepare_synthetic_dulai_from_uavstereo.py   # Dataset generation script
+├── run_inference.py                              # Model inference pipeline
+├── main.py                                       # Entry script (if used)
+├── README.md
+└── .gitignore
 
